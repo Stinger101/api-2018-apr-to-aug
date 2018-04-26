@@ -97,6 +97,7 @@ $c;
     }
     //filters array for unique values
     $c=array_unique($c);
+    //country output
     echo "(".count($c).")\t<ul>";
     foreach ($c as $value) {
       // outputs array
