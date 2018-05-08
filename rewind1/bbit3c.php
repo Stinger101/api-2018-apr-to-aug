@@ -37,7 +37,7 @@ $bt3c = str_replace("|",".",$bbit3c);
 $bit3c= explode(".",$bt3c);//puts the values of the string in to an array
  $b=array_chunk($bit3c,4);// divides the array into smaller arrays with a length of 4 to form the rows
 
- echo "<ol>";
+ echo "<ol type='a'>";
  $phone;
  $country;
  $names_counter=0;
@@ -86,7 +86,7 @@ $bit3c= explode(".",$bt3c);//puts the values of the string in to an array
    }
    echo "</li>";
  }
- echo "</ol>";
+ echo "</ol >";
  echo "Summary: <p> \ttotal names: {$names_counter} <br> ";
 $c;
  echo "\ttotal unique countries: ";
@@ -97,8 +97,8 @@ $c;
     }
     //filters array for unique values
     $c=array_unique($c);
-    //country output
-    echo "(".count($c).")\t<ul>";
+    //country
+    echo "(".count($c).")\t<ul type='-'>";
     foreach ($c as $value) {
       // outputs array
         echo "<li>{$value}</li>";
