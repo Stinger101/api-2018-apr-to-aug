@@ -22,11 +22,14 @@ to do all the heavy lifting.
 #### 👉 [Webservices explained [8:13]](https://www.linkedin.com/learning/programming-foundations-web-services/what-is-a-web-service) 👉 Watch 👈 👍
 
 ##### @TODO : Tizi 🤔
-1. What is a webservice?
-2. What message formats are used in webservices?
+1. What is a webservice? a platform independent 'app component' that is available over the internet and utilizes a standardized xml messaging format to give certain functionality to the end user. W3SCHOOOLS defines the simply as web components.
+2. What message formats are used in webservices? plain old xml,json, atom
 3. What are the advantages and disadvantages of using webservices?
-4. What is a service oriented architecture?
-5. Distinguish webservice message formats and webservice standards.
+        advantages
+ web services provide interoperability between different applications. they are platform independent. It also allows for reusability of code rather than repeated creation on demand. web services use a standardized protocol.
+        diasdvantages
+4. What is a service oriented architecture? this is a collection of services. it is a software design where services are provided by components to other components over a communication protocol e.g http
+5. Distinguish webservice message formats and webservice standards.examples of message formats are like xml,json while standards are like soap, REST
 
 ### [Understanding REST - How it works ](https://spring.io/understanding/REST) 😃 😃
 
