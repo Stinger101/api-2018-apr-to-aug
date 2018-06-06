@@ -58,7 +58,27 @@ to do all the heavy lifting.
 1. Consider the following REST endpoint;
   1. [https://jsonplaceholder.typicode.com/posts](https://jsonplaceholder.typicode.com/posts) - Returns all posts
 2. Write a simple ajax code that consumes the above RESTful API and displays the total number of posts as an alert.
+
+var xmlHttp=new XMLHttpRequest();
+var url="https://jsonplaceholder.typicode.com/posts";
+xmlHttp.onreadystatechange=function(){
+  if(this.readyState==4 && this.status==200){
+    var myArr= JSON.parse(this.responseText);
+    alert("number of posts: "+myArr.length+" ");
+  }
+}
+xmlHttp.open("GET",url,true);
+xmlHttp.send();
 3. Rewrite the above using jQuery Ajax.
+
+$.get("https://jsonplaceholder.typicode.com/posts",function (data,status) {
+  if (status=="success") {
+    alert("the number of posts is "+data.length);
+  }else {
+    alert("the status is "+status);
+  }
+
+});
 
 ### References
 

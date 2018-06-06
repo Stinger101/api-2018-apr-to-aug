@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Json post rest</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    function ajaxjquery() {
+      $.get("https://jsonplaceholder.typicode.com/posts",function (data,status) {
+        if (status=="success") {
+          alert("the number of posts is "+data.length);
+        }else {
+          alert("the status is "+status);
+        }
+
+      });
+    }
+    function ajaxjs() {
+    var xmlHttp=new XMLHttpRequest();
+    var url="https://jsonplaceholder.typicode.com/posts";
+    xmlHttp.onreadystatechange=function(){
+      if(this.readyState==4 && this.status==200){
+        var myArr= JSON.parse(this.responseText);
+        alert("number of posts: "+myArr.length+" ");
+      }
+    }
+    xmlHttp.open("GET",url,true);
+    xmlHttp.send();
+  }
+    </script>
+  </head>
+  <body>
+    <button type="button" id="but1" name="button" onclick="ajaxjquery()">AjaxJQ</button>
+    <button type="button" id="but2" name="button" onclick="ajaxjs()">AjaxJS</button>
+
+  </body>
+</html>
